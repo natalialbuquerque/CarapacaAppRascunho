@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */; };
+		EC5A262A28CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */; };
+		EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */; };
+		EC5A262E28CA709800368730 /* ExplorarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262D28CA709800368730 /* ExplorarViewController.swift */; };
+		EC5A263028CA70A600368730 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262F28CA70A600368730 /* FavoritosViewController.swift */; };
+		EC90E86F28C7AE97004237E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E86E28C7AE97004237E1 /* AppDelegate.swift */; };
+		EC90E87128C7AE97004237E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E87028C7AE97004237E1 /* SceneDelegate.swift */; };
+		EC90E87328C7AE97004237E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E87228C7AE97004237E1 /* ViewController.swift */; };
+		EC90E87828C7AE97004237E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC90E87728C7AE97004237E1 /* Assets.xcassets */; };
+		EC90E87B28C7AE97004237E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC90E87928C7AE97004237E1 /* LaunchScreen.storyboard */; };
+		EC90E88428C7B12D004237E1 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E88228C7B12C004237E1 /* UIViewController+Preview.swift */; };
+		EC90E88528C7B12D004237E1 /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E88328C7B12D004237E1 /* UIView+Preview.swift */; };
+		ECC1B32928CA25140029386D /* NovaViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1B32828CA25140029386D /* NovaViagemViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColocarDestinosViewController.swift; sourceTree = "<group>"; };
+		EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrucaoDoRoteiroViewController.swift; sourceTree = "<group>"; };
+		EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		EC5A262D28CA709800368730 /* ExplorarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarViewController.swift; sourceTree = "<group>"; };
+		EC5A262F28CA70A600368730 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		EC90E86B28C7AE97004237E1 /* Carapaca App rascunho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carapaca App rascunho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC90E86E28C7AE97004237E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC90E87028C7AE97004237E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC90E87228C7AE97004237E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC90E87728C7AE97004237E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC90E87A28C7AE97004237E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC90E87C28C7AE97004237E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC90E88228C7B12C004237E1 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
+		EC90E88328C7B12D004237E1 /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
+		ECC1B32828CA25140029386D /* NovaViagemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaViagemViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC90E86828C7AE97004237E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC90E86228C7AE97004237E1 = {
+			isa = PBXGroup;
+			children = (
+				EC90E86D28C7AE97004237E1 /* Carapaca App rascunho */,
+				EC90E86C28C7AE97004237E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC90E86C28C7AE97004237E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC90E86B28C7AE97004237E1 /* Carapaca App rascunho.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC90E86D28C7AE97004237E1 /* Carapaca App rascunho */ = {
+			isa = PBXGroup;
+			children = (
+				EC90E86E28C7AE97004237E1 /* AppDelegate.swift */,
+				EC90E87028C7AE97004237E1 /* SceneDelegate.swift */,
+				EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */,
+				ECC1B32A28CA25310029386D /* ViewControlllers */,
+				EC90E87728C7AE97004237E1 /* Assets.xcassets */,
+				EC90E87928C7AE97004237E1 /* LaunchScreen.storyboard */,
+				EC90E87C28C7AE97004237E1 /* Info.plist */,
+				EC90E88328C7B12D004237E1 /* UIView+Preview.swift */,
+				EC90E88228C7B12C004237E1 /* UIViewController+Preview.swift */,
+			);
+			path = "Carapaca App rascunho";
+			sourceTree = "<group>";
+		};
+		ECC1B32A28CA25310029386D /* ViewControlllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC5A262D28CA709800368730 /* ExplorarViewController.swift */,
+				EC5A262F28CA70A600368730 /* FavoritosViewController.swift */,
+				EC90E87228C7AE97004237E1 /* ViewController.swift */,
+				ECC1B32828CA25140029386D /* NovaViagemViewController.swift */,
+				EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */,
+				EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */,
+			);
+			path = ViewControlllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC90E86A28C7AE97004237E1 /* Carapaca App rascunho */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC90E87F28C7AE97004237E1 /* Build configuration list for PBXNativeTarget "Carapaca App rascunho" */;
+			buildPhases = (
+				EC90E86728C7AE97004237E1 /* Sources */,
+				EC90E86828C7AE97004237E1 /* Frameworks */,
+				EC90E86928C7AE97004237E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Carapaca App rascunho";
+			productName = "Carapaca App rascunho";
+			productReference = EC90E86B28C7AE97004237E1 /* Carapaca App rascunho.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC90E86328C7AE97004237E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					EC90E86A28C7AE97004237E1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EC90E86628C7AE97004237E1 /* Build configuration list for PBXProject "Carapaca App rascunho" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC90E86228C7AE97004237E1;
+			productRefGroup = EC90E86C28C7AE97004237E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC90E86A28C7AE97004237E1 /* Carapaca App rascunho */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC90E86928C7AE97004237E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC90E87B28C7AE97004237E1 /* LaunchScreen.storyboard in Resources */,
+				EC90E87828C7AE97004237E1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC90E86728C7AE97004237E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC90E87328C7AE97004237E1 /* ViewController.swift in Sources */,
+				EC5A262A28CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift in Sources */,
+				ECC1B32928CA25140029386D /* NovaViagemViewController.swift in Sources */,
+				EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */,
+				EC90E86F28C7AE97004237E1 /* AppDelegate.swift in Sources */,
+				EC5A263028CA70A600368730 /* FavoritosViewController.swift in Sources */,
+				EC90E87128C7AE97004237E1 /* SceneDelegate.swift in Sources */,
+				EC90E88528C7B12D004237E1 /* UIView+Preview.swift in Sources */,
+				EC90E88428C7B12D004237E1 /* UIViewController+Preview.swift in Sources */,
+				EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */,
+				EC5A262E28CA709800368730 /* ExplorarViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC90E87928C7AE97004237E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC90E87A28C7AE97004237E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC90E87D28C7AE97004237E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC90E87E28C7AE97004237E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC90E88028C7AE97004237E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3MK6QXS2R9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Carapaca App rascunho/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "natalia.albuquerque.Carapaca-App-rascunho";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC90E88128C7AE97004237E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3MK6QXS2R9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Carapaca App rascunho/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "natalia.albuquerque.Carapaca-App-rascunho";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC90E86628C7AE97004237E1 /* Build configuration list for PBXProject "Carapaca App rascunho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC90E87D28C7AE97004237E1 /* Debug */,
+				EC90E87E28C7AE97004237E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC90E87F28C7AE97004237E1 /* Build configuration list for PBXNativeTarget "Carapaca App rascunho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC90E88028C7AE97004237E1 /* Debug */,
+				EC90E88128C7AE97004237E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC90E86328C7AE97004237E1 /* Project object */;
+}
