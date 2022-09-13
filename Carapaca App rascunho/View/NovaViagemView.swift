@@ -74,7 +74,7 @@ class NovaViagemView: UIView {
         
         proximoButton.setTitle("  Próximo  ", for: .normal)
         proximoButton.setTitleColor(.white, for: .normal)
-        proximoButton.tintColor = .systemGreen
+        proximoButton.tintColor = UIColor(red: 0.10, green: 0.42, blue: 0.33, alpha: 1.00)
         proximoButton.layer.cornerCurve = .continuous
         proximoButton.layer.cornerRadius = 20
         proximoButton.clipsToBounds = true

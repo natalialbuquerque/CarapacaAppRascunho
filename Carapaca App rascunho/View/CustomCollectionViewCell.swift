@@ -12,7 +12,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     private let myImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "house")
+        imageView.image = UIImage(systemName: "bag.fill")
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         return imageView
@@ -22,7 +22,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Custom"
         label.textAlignment = .left
-        label.clipsToBounds = true 
+        label.clipsToBounds = true
         return label
     } ()
     
@@ -39,11 +39,11 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        myLabel.frame = CGRect(x: 5,
+        myLabel.frame = CGRect(x: 0,
                                y: contentView.frame.size.height-50,
                                width: contentView.frame.size.width-10,
                                height: 50)
-        myImageView.frame = CGRect(x: 5,
+        myImageView.frame = CGRect(x: 0,
                                y: 0,
                                width: contentView.frame.size.width-10,
                                height: contentView.frame.size.height-50)
@@ -55,6 +55,21 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        myLabel.text = nil 
+        myLabel.text = nil
     }
 }
+// MARK: - Preview
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct CustomCollectionViewCell_Preview: PreviewProvider {
+    static var previews: some View {
+        // view controller using programmatic UI
+        Group {
+            CustomCollectionViewCell().showPreview().previewDevice("iPhone 13").previewInterfaceOrientation(.portrait)
+//            ViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
+        }
+    }
+}
+#endif

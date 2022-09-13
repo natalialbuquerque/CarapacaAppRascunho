@@ -42,7 +42,7 @@ class CVViewController: UIViewController, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier , for: indexPath) as! CustomCollectionViewCell
-        cell.configure(label: "Custom \(indexPath.row)") 
+        cell.configure(label: "Custom \(indexPath.row)")
          
         return cell
     }

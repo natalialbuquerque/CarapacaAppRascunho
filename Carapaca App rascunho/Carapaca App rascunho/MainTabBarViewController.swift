@@ -12,7 +12,7 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc1 = UINavigationController(rootViewController: ViewController())
+        let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: ExplorarViewController())
         let vc3 = UINavigationController(rootViewController: FavoritosViewController())
         

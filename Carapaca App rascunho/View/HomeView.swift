@@ -44,13 +44,14 @@ class HomeView: UIView {
     
         func setupViewHierarchy(){
             // MARK: - Setup na hierarquia das subviews
-            self.addSubview(bgHomeView)
+//            self.addSubview(bgHomeView)
             self.addSubview(stackView)
-            
+
             stackView.addArrangedSubview(bgHomeContainer)
             stackView.addArrangedSubview(criarRoteiroButtonContainer)
             stackView.addArrangedSubview(meusRoteirosContainer)
             stackView.addArrangedSubview(meusRoteirosCollectionViewContainer)
+
             
             bgHomeContainer.addSubview(bgHomeView)
             title1Container.addSubview(title1Label)
@@ -58,6 +59,7 @@ class HomeView: UIView {
             criarRoteiroButtonContainer.addSubview(criarRoteiroButton)
             meusRoteirosContainer.addSubview(meusRoteirosLabel)
             meusRoteirosCollectionViewContainer.addSubview(meusRoteirosCollectionView)
+
             
             bgHomeContainer.addSubview(title1Container)
             bgHomeContainer.addSubview(title2Container)
@@ -69,57 +71,57 @@ class HomeView: UIView {
             // MARK: - Configuração das constraints de auto layout
             bgHomeView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                bgHomeView.topAnchor.constraint(equalTo: self.topAnchor),
-                bgHomeView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-                bgHomeView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+                bgHomeView.topAnchor.constraint(equalTo: bgHomeContainer.topAnchor),
+                bgHomeView.leadingAnchor.constraint(equalTo: bgHomeContainer.leadingAnchor),
+                bgHomeView.trailingAnchor.constraint(equalTo: bgHomeContainer.trailingAnchor),
+                bgHomeView.bottomAnchor.constraint(equalTo: bgHomeContainer.bottomAnchor)
             ])
-            
+
             stackView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 stackView.topAnchor.constraint(equalTo: self.topAnchor),
                 stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                 stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+                stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
             ])
-            
+
             title1Label.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 title1Label.leadingAnchor.constraint(equalTo: title1Container.leadingAnchor, constant: 16),
                 title1Label.bottomAnchor.constraint(equalTo: bgHomeView.bottomAnchor, constant: -44)
             ])
-            
+
             title2Label.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 title2Label.leadingAnchor.constraint(equalTo: title2Container.leadingAnchor, constant: 16),
                 title2Label.bottomAnchor.constraint(equalTo: bgHomeView.bottomAnchor, constant: -18)
             ])
-            
+
             criarRoteiroButton.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 criarRoteiroButton.centerXAnchor.constraint(equalTo: criarRoteiroButtonContainer.centerXAnchor),
                 criarRoteiroButton.trailingAnchor.constraint(equalTo: criarRoteiroButtonContainer.trailingAnchor, constant: -16),
                 criarRoteiroButton.leadingAnchor.constraint(equalTo: criarRoteiroButtonContainer.leadingAnchor, constant: 16),
-                criarRoteiroButton.heightAnchor.constraint(equalToConstant: 64),
-                criarRoteiroButton.topAnchor.constraint(equalTo: bgHomeView.bottomAnchor, constant: 22)
+                criarRoteiroButton.topAnchor.constraint(equalTo: criarRoteiroButtonContainer.topAnchor, constant: 22),
+                criarRoteiroButton.bottomAnchor.constraint(equalTo: criarRoteiroButtonContainer.bottomAnchor, constant: -24),
+                criarRoteiroButton.heightAnchor.constraint(equalToConstant: 64)
             ])
-            
+
             meusRoteirosLabel.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                meusRoteirosLabel.leadingAnchor.constraint(equalTo: title2Container.leadingAnchor, constant: 16),
-                meusRoteirosLabel.topAnchor.constraint(equalTo: criarRoteiroButton.bottomAnchor, constant: 24)
+                meusRoteirosLabel.leadingAnchor.constraint(equalTo: meusRoteirosContainer.leadingAnchor, constant: 16),
+                meusRoteirosLabel.topAnchor.constraint(equalTo: meusRoteirosContainer.topAnchor),
+                meusRoteirosLabel.bottomAnchor.constraint(equalTo: meusRoteirosContainer.bottomAnchor, constant: -16)
             ])
-            
-            
-            
-            
+
             meusRoteirosCollectionView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 meusRoteirosCollectionView.centerYAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.centerYAnchor),
                 meusRoteirosCollectionView.centerXAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.centerXAnchor),
                 meusRoteirosCollectionView.topAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.topAnchor),
-                meusRoteirosCollectionViewContainer.leadingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.leadingAnchor, constant:  16),
-                meusRoteirosCollectionViewContainer.trailingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.trailingAnchor, constant:  -16)
-    
+                meusRoteirosCollectionView.leadingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.leadingAnchor, constant:  16),
+                meusRoteirosCollectionView.trailingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.trailingAnchor, constant:  -16)
+
             ])
         }
         
@@ -140,9 +142,9 @@ class HomeView: UIView {
             
             criarRoteiroButton.setTitle("Criar novo roteiro!", for: .normal)
             criarRoteiroButton.setTitleColor(.white, for: .normal)
-            criarRoteiroButton.tintColor = .systemGreen
+            criarRoteiroButton.tintColor =  UIColor(red: 0.14, green: 0.69, blue: 0.55, alpha: 1.00)
             criarRoteiroButton.layer.cornerCurve = .continuous
-            criarRoteiroButton.layer.cornerRadius = 40
+            criarRoteiroButton.layer.cornerRadius = 35
             criarRoteiroButton.clipsToBounds = true
             
             
@@ -154,22 +156,31 @@ class HomeView: UIView {
             
             stackView.axis = .vertical
             stackView.alignment = .fill
-            stackView.distribution = .fillProportionally
-            stackView.spacing = 22
+            stackView.distribution = .fill
+            stackView.spacing = 0
             
             layout.scrollDirection = .vertical
             layout.minimumLineSpacing = 1
             layout.minimumInteritemSpacing = 1
-            layout.itemSize = CGSize(width: (self.frame.size.width/2)-4,
-                                     height: (self.frame.size.width/2)-4)
+            layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//            layout.itemSize = CGSize(width: (self.frame.size.width/2)-4,
+//                                     height: (self.frame.size.width/2)-4)
             meusRoteirosCollectionView.collectionViewLayout = layout
     //        guard let meusRoteirosCollectionView = meusRoteirosCollectionView else {
     //            return
     //        }
             meusRoteirosCollectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
 //            meusRoteirosCollectionView.frame = self.bounds
-
+            
+            stackView.backgroundColor = .gray
+            bgHomeContainer.backgroundColor = .orange
+            criarRoteiroButtonContainer.backgroundColor = .systemPink
+            meusRoteirosContainer.backgroundColor = .purple
+            meusRoteirosCollectionViewContainer.backgroundColor = .red
         }
+    
+    
+    
     
     func setupAdditionalConfiguration(){
          // MARK: - Outras configurações
