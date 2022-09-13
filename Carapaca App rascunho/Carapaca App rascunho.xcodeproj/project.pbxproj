@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC58E04628CF6B89000989B0 /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04528CF6B89000989B0 /* CVViewController.swift */; };
+		EC58E04828CF6E77000989B0 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */; };
+		EC58E04A28CFCCD8000989B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04928CFCCD8000989B0 /* HomeView.swift */; };
+		EC58E04C28CFD1E6000989B0 /*  HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04B28CFD1E6000989B0 /*  HomeViewDelegate.swift */; };
 		EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */; };
 		EC5A262A28CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */; };
 		EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC58E04528CF6B89000989B0 /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
+		EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC58E04928CFCCD8000989B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EC58E04B28CFD1E6000989B0 /*  HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " HomeViewDelegate.swift"; sourceTree = "<group>"; };
 		EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColocarDestinosViewController.swift; sourceTree = "<group>"; };
 		EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrucaoDoRoteiroViewController.swift; sourceTree = "<group>"; };
 		EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +62,9 @@
 		EC90E86228C7AE97004237E1 = {
 			isa = PBXGroup;
 			children = (
+				EC58E04B28CFD1E6000989B0 /*  HomeViewDelegate.swift */,
+				EC58E04928CFCCD8000989B0 /* HomeView.swift */,
+				EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */,
 				EC90E86D28C7AE97004237E1 /* Carapaca App rascunho */,
 				EC90E86C28C7AE97004237E1 /* Products */,
 			);
@@ -86,6 +97,7 @@
 		ECC1B32A28CA25310029386D /* ViewControlllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC58E04528CF6B89000989B0 /* CVViewController.swift */,
 				EC5A262D28CA709800368730 /* ExplorarViewController.swift */,
 				EC5A262F28CA70A600368730 /* FavoritosViewController.swift */,
 				EC90E87228C7AE97004237E1 /* ViewController.swift */,
@@ -167,15 +179,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC90E87328C7AE97004237E1 /* ViewController.swift in Sources */,
+				EC58E04A28CFCCD8000989B0 /* HomeView.swift in Sources */,
+				EC58E04628CF6B89000989B0 /* CVViewController.swift in Sources */,
 				EC5A262A28CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift in Sources */,
 				ECC1B32928CA25140029386D /* NovaViagemViewController.swift in Sources */,
 				EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */,
 				EC90E86F28C7AE97004237E1 /* AppDelegate.swift in Sources */,
 				EC5A263028CA70A600368730 /* FavoritosViewController.swift in Sources */,
 				EC90E87128C7AE97004237E1 /* SceneDelegate.swift in Sources */,
+				EC58E04828CF6E77000989B0 /* CustomCollectionViewCell.swift in Sources */,
 				EC90E88528C7B12D004237E1 /* UIView+Preview.swift in Sources */,
 				EC90E88428C7B12D004237E1 /* UIViewController+Preview.swift in Sources */,
 				EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */,
+				EC58E04C28CFD1E6000989B0 /*  HomeViewDelegate.swift in Sources */,
 				EC5A262E28CA709800368730 /* ExplorarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,6 @@ class MainTabBarViewController: UITabBarController {
         
         setViewControllers([vc1, vc2, vc3], animated: true)
         
-
     }
     
 

@@ -30,7 +30,6 @@ class ExplorarViewController: UIViewController {
         let localizacaoButtonContainer = UIView()
 
         
-        
         let stackView = UIStackView()
         
         // MARK: - Setup na hierarquia das subviews
@@ -145,7 +144,7 @@ struct ExplorarViewController_Preview: PreviewProvider {
     static var previews: some View {
         // view controller using programmatic UI
         Group {
-            ExplorarViewController().showPreview().previewDevice("iPhone 13")
+            ExplorarViewController().showPreview().previewDevice("iPhone 13").previewInterfaceOrientation(.portrait)
 //            ViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
         }
     }
