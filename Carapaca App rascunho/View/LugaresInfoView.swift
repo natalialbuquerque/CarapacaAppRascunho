@@ -20,7 +20,9 @@ class LugaresInfoView: UIView {
     let telefoneLabel = UILabel()
     let telefoneDetalhesLabel = UILabel()
     let fotosLabel = UILabel()
+    let fotosTableView = UITableView()
     let adicionarAoRoteiroButton = UIButton(configuration: .filled())
+    
     
     
     let bgImageContainer = UIView()
@@ -34,6 +36,7 @@ class LugaresInfoView: UIView {
     let telefoneLabelContainer = UIView()
     let telefoneDetalhesLabelContainer = UIView()
     let fotosLabelContainer = UIView()
+    let fotosTableViewContainer = UIView()
     let adicionarAoRoteiroButtonContainer = UIView()
     
     
@@ -64,6 +67,7 @@ class LugaresInfoView: UIView {
             stackView.addArrangedSubview(telefoneLabelContainer)
             stackView.addArrangedSubview(telefoneDetalhesLabelContainer)
             stackView.addArrangedSubview(fotosLabelContainer)
+            stackView.addArrangedSubview(fotosTableViewContainer)
             stackView.addArrangedSubview(adicionarAoRoteiroButtonContainer)
     
     
@@ -79,7 +83,9 @@ class LugaresInfoView: UIView {
             telefoneLabelContainer.addSubview(telefoneLabel)
             telefoneDetalhesLabelContainer.addSubview(telefoneDetalhesLabel)
             fotosLabelContainer.addSubview(fotosLabel)
+            fotosTableViewContainer.addSubview(fotosTableView)
             adicionarAoRoteiroButtonContainer.addSubview(adicionarAoRoteiroButton)
+            
             
             bgImageContainer.addSubview(title1Container)
             grayViewContainer.addSubview(ofereceLabelContainer)
@@ -110,7 +116,7 @@ class LugaresInfoView: UIView {
             title1Label.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 title1Label.leadingAnchor.constraint(equalTo: title1Container.leadingAnchor, constant: 16),
-                title1Label.bottomAnchor.constraint(equalTo: bgImageView.bottomAnchor, constant: -44)
+                title1Label.bottomAnchor.constraint(equalTo: bgImageView.bottomAnchor, constant: -20)
             ])
             
             grayView.translatesAutoresizingMaskIntoConstraints = false
@@ -121,22 +127,21 @@ class LugaresInfoView: UIView {
                 grayView.leadingAnchor.constraint(equalTo: grayViewContainer.leadingAnchor,constant: 16),
                 grayView.trailingAnchor.constraint(equalTo: grayViewContainer.trailingAnchor, constant: -16),
                 grayView.heightAnchor.constraint(equalToConstant: 72)
-                
             ])
             
             ofereceLabel.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 ofereceLabel.leadingAnchor.constraint(equalTo: ofereceLabelContainer.leadingAnchor,constant: 32),
-                ofereceLabel.centerXAnchor.constraint(equalTo: ofereceLabelContainer.centerXAnchor),
+                ofereceLabel.topAnchor.constraint(equalTo: ofereceLabelContainer.topAnchor),
+                ofereceLabel.centerYAnchor.constraint(equalTo: grayView.centerYAnchor),
             ])
             
             circleView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                circleView.trailingAnchor.constraint(equalTo: grayView.trailingAnchor, constant: -16),
-                circleView.leadingAnchor.constraint(equalTo: ofereceLabel.trailingAnchor),
                 circleView.heightAnchor.constraint(equalToConstant: 40),
                 circleView.widthAnchor.constraint(equalToConstant: 40),
-                circleView.centerYAnchor.constraint(equalTo: grayView.centerYAnchor)
+                circleView.trailingAnchor.constraint(equalTo: grayView.trailingAnchor, constant: -16),
+                circleView.centerYAnchor.constraint(equalTo: grayView.centerYAnchor),
             ])
             
             circleImage.translatesAutoresizingMaskIntoConstraints = false
@@ -147,18 +152,61 @@ class LugaresInfoView: UIView {
             
             enderecoLabel.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                enderecoLabel.trailingAnchor.constraint(equalTo: enderecoLabelContainer.trailingAnchor, constant: -16),
                 enderecoLabel.leadingAnchor.constraint(equalTo: enderecoLabelContainer.leadingAnchor, constant: 16),
                 enderecoLabel.topAnchor.constraint(equalTo: enderecoLabelContainer.topAnchor),
-                enderecoLabel.bottomAnchor.constraint(equalTo: enderecoLabelContainer.bottomAnchor)
+                enderecoLabel.bottomAnchor.constraint(equalTo: enderecoLabelContainer.bottomAnchor,constant: -8)
             ])
             
-            
             enderecoDetalhesLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                enderecoDetalhesLabel.trailingAnchor.constraint(equalTo: enderecoDetalhesLabelContainer.trailingAnchor, constant: -16),
+                enderecoDetalhesLabel.leadingAnchor.constraint(equalTo: enderecoDetalhesLabelContainer.leadingAnchor, constant: 16),
+                enderecoDetalhesLabel.topAnchor.constraint(equalTo: enderecoDetalhesLabelContainer.topAnchor),
+                enderecoDetalhesLabel.bottomAnchor.constraint(equalTo: enderecoDetalhesLabelContainer.bottomAnchor, constant: -24)
+            ])
+            
+        
             telefoneLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                telefoneLabel.trailingAnchor.constraint(equalTo: telefoneLabelContainer.trailingAnchor, constant: -16),
+                telefoneLabel.leadingAnchor.constraint(equalTo: telefoneLabelContainer.leadingAnchor, constant: 16),
+                telefoneLabel.topAnchor.constraint(equalTo: telefoneLabelContainer.topAnchor),
+                telefoneLabel.bottomAnchor.constraint(equalTo: telefoneLabelContainer.bottomAnchor, constant: -8)
+            ])
+
+
             telefoneDetalhesLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                telefoneDetalhesLabel.trailingAnchor.constraint(equalTo: telefoneDetalhesLabelContainer.trailingAnchor, constant: -16),
+                telefoneDetalhesLabel.leadingAnchor.constraint(equalTo: telefoneDetalhesLabelContainer.leadingAnchor, constant: 16),
+                telefoneDetalhesLabel.topAnchor.constraint(equalTo: telefoneDetalhesLabelContainer.topAnchor),
+                telefoneDetalhesLabel.bottomAnchor.constraint(equalTo: telefoneDetalhesLabelContainer.bottomAnchor, constant: -24)
+            ])
+
             fotosLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                fotosLabel.trailingAnchor.constraint(equalTo: fotosLabelContainer.trailingAnchor, constant: -16),
+                fotosLabel.leadingAnchor.constraint(equalTo: fotosLabelContainer.leadingAnchor, constant: 16),
+                fotosLabel.topAnchor.constraint(equalTo: fotosLabelContainer.topAnchor),
+                fotosLabel.bottomAnchor.constraint(equalTo: fotosLabelContainer.bottomAnchor, constant: -9)
+            ])
+//
+//            fotosTableView.translatesAutoresizingMaskIntoConstraints = false
+//            NSLayoutConstraint.activate([
+//                fotosTableView.trailingAnchor.constraint(equalTo: fotosTableViewContainer.trailingAnchor, constant: -16),
+//                fotosTableView.leadingAnchor.constraint(equalTo: fotosTableViewContainer.leadingAnchor, constant: 16),
+//                fotosTableView.topAnchor.constraint(equalTo: fotosTableViewContainer.topAnchor),
+//                fotosTableView.bottomAnchor.constraint(equalTo: fotosTableViewContainer.bottomAnchor)
+//            ])
+
             adicionarAoRoteiroButton.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                adicionarAoRoteiroButton.trailingAnchor.constraint(equalTo: adicionarAoRoteiroButtonContainer.trailingAnchor, constant: -16),
+                adicionarAoRoteiroButton.leadingAnchor.constraint(equalTo: adicionarAoRoteiroButtonContainer.leadingAnchor, constant: 16),
+                adicionarAoRoteiroButton.topAnchor.constraint(equalTo: adicionarAoRoteiroButtonContainer.topAnchor, constant: 179),
+                adicionarAoRoteiroButton.bottomAnchor.constraint(equalTo: adicionarAoRoteiroButtonContainer.bottomAnchor, constant: -16),
+                adicionarAoRoteiroButton.heightAnchor.constraint(equalToConstant: 48)
+            ])
 
         }
         
@@ -170,7 +218,7 @@ class LugaresInfoView: UIView {
             title1Label.textAlignment = .left
             title1Label.text = "Pet Lovers"
             title1Label.textColor = .white
-            title1Label.font = UIFont.boldSystemFont(ofSize: 24)
+            title1Label.font = UIFont.boldSystemFont(ofSize: 28)
             
             grayView.backgroundColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.00)
             grayView.layer.cornerRadius = 16
@@ -194,36 +242,46 @@ class LugaresInfoView: UIView {
             enderecoLabel.textAlignment = .left
             enderecoLabel.text = "Endereço"
             enderecoLabel.font = UIFont.boldSystemFont(ofSize: 17)
-            enderecoLabel.textColor = UIColor(red: 0.34, green: 0.34, blue: 0.34, alpha: 1.00)
+            enderecoLabel.textColor = UIColor(red: 0.02, green: 0.13, blue: 0.22, alpha: 1.00)
             
-            enderecoLabel.textAlignment = .left
-            enderecoLabel.text = "Endereço"
-            enderecoLabel.font = UIFont.boldSystemFont(ofSize: 17)
-            enderecoLabel.textColor = UIColor(red: 0.34, green: 0.34, blue: 0.34, alpha: 1.00)
+            enderecoDetalhesLabel.textAlignment = .left
+            enderecoDetalhesLabel.text = "Av. Min. Marcos Freire, 1815 - Bairro Novo"
+            enderecoDetalhesLabel.font = UIFont.boldSystemFont(ofSize: 15)
+            enderecoDetalhesLabel.textColor = UIColor(red: 0.34, green: 0.34, blue: 0.34, alpha: 1.00)
             
+            telefoneLabel.textAlignment = .left
+            telefoneLabel.text = "Telefone"
+            telefoneLabel.font = UIFont.boldSystemFont(ofSize: 17)
+            telefoneLabel.textColor = UIColor(red: 0.02, green: 0.13, blue: 0.22, alpha: 1.00)
             
-
-            stackView.backgroundColor = .gray
-            grayViewContainer.backgroundColor = .orange
-            enderecoLabelContainer.backgroundColor = .systemPink
-            enderecoDetalhesLabelContainer.backgroundColor = .purple
-            telefoneLabelContainer.backgroundColor = .red
-            telefoneDetalhesLabelContainer.backgroundColor = .gray
-            fotosLabelContainer.backgroundColor = .orange
-            fotosLabelContainer.backgroundColor = .systemPink
-            adicionarAoRoteiroButtonContainer.backgroundColor = .purple
+            telefoneDetalhesLabel.textAlignment = .left
+            telefoneDetalhesLabel.text = "81 00000-0000"
+            telefoneDetalhesLabel.font = UIFont.boldSystemFont(ofSize: 15)
+            telefoneDetalhesLabel.textColor = UIColor(red: 0.34, green: 0.34, blue: 0.34, alpha: 1.00)
             
+            fotosLabel.textAlignment = .left
+            fotosLabel.text = "Fotos"
+            fotosLabel.font = UIFont.boldSystemFont(ofSize: 17)
+            fotosLabel.textColor = UIColor(red: 0.02, green: 0.13, blue: 0.22, alpha: 1.00)
             
-
-            
-//            criarRoteiroButton.setTitle("Criar novo roteiro!", for: .normal)
-//            criarRoteiroButton.setTitleColor(.white, for: .normal)
-//            criarRoteiroButton.tintColor = UIColor(red: 0.14, green: 0.69, blue: 0.55, alpha: 1.00)
-//            criarRoteiroButton.layer.cornerCurve = .continuous
-//            criarRoteiroButton.layer.cornerRadius = 35
-//            criarRoteiroButton.clipsToBounds = true
+            adicionarAoRoteiroButton.setTitle("Adicionar ao roteiro", for: .normal)
+            adicionarAoRoteiroButton.setTitleColor(.white, for: .normal)
+            adicionarAoRoteiroButton.tintColor =  UIColor(red: 0.14, green: 0.69, blue: 0.55, alpha: 1.00)
+            adicionarAoRoteiroButton.layer.cornerCurve = .continuous
+            adicionarAoRoteiroButton.layer.cornerRadius = 30
+            adicionarAoRoteiroButton.clipsToBounds = true
 //
-//
+//            stackView.backgroundColor = .systemRed
+//            grayViewContainer.backgroundColor = .orange
+//            circleViewContainer.backgroundColor = .black
+//            enderecoLabelContainer.backgroundColor = .systemPink
+//            enderecoDetalhesLabelContainer.backgroundColor = .gray
+//            telefoneLabelContainer.backgroundColor = .red
+//            telefoneDetalhesLabelContainer.backgroundColor = .gray
+//            fotosLabelContainer.backgroundColor = .orange
+//            fotosTableViewContainer.backgroundColor = .green
+//            adicionarAoRoteiroButtonContainer.backgroundColor = .purple
+            
 //            meusRoteirosLabel.textAlignment = .left
 //            meusRoteirosLabel.text = "Meus Roteiros"
 //            meusRoteirosLabel.textColor = .black
@@ -234,12 +292,7 @@ class LugaresInfoView: UIView {
             stackView.alignment = .fill
             stackView.distribution = .fill
             stackView.spacing = 0
-            
-            
-
         }
- 
-
 }
 // MARK: - Preview
 #if DEBUG

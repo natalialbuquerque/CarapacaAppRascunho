@@ -68,8 +68,8 @@
 		EC58E04F28D0A55A000989B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EC58E04928CFCCD8000989B0 /* HomeView.swift */,
 				EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */,
+				EC58E04928CFCCD8000989B0 /* HomeView.swift */,
 				EC58E04D28D0A534000989B0 /* NovaViagemView.swift */,
 				EC58E05528D0C8A3000989B0 /* LugaresInfoView.swift */,
 			);
