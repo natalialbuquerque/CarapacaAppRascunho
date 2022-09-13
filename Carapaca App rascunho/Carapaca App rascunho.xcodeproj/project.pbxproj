@@ -11,6 +11,7 @@
 		EC58E04828CF6E77000989B0 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */; };
 		EC58E04A28CFCCD8000989B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04928CFCCD8000989B0 /* HomeView.swift */; };
 		EC58E04C28CFD1E6000989B0 /*  HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04B28CFD1E6000989B0 /*  HomeViewDelegate.swift */; };
+		EC58E04E28D0A534000989B0 /* NovaViagemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58E04D28D0A534000989B0 /* NovaViagemView.swift */; };
 		EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */; };
 		EC5A262A28CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */; };
 		EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */; };
@@ -31,6 +32,7 @@
 		EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC58E04928CFCCD8000989B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC58E04B28CFD1E6000989B0 /*  HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " HomeViewDelegate.swift"; sourceTree = "<group>"; };
+		EC58E04D28D0A534000989B0 /* NovaViagemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaViagemView.swift; sourceTree = "<group>"; };
 		EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColocarDestinosViewController.swift; sourceTree = "<group>"; };
 		EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrucaoDoRoteiroViewController.swift; sourceTree = "<group>"; };
 		EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -59,12 +61,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC90E86228C7AE97004237E1 = {
+		EC58E04F28D0A55A000989B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */,
+				EC58E04928CFCCD8000989B0 /* HomeView.swift */,
+				EC58E04D28D0A534000989B0 /* NovaViagemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC58E05028D0A575000989B0 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				EC58E04B28CFD1E6000989B0 /*  HomeViewDelegate.swift */,
-				EC58E04928CFCCD8000989B0 /* HomeView.swift */,
-				EC58E04728CF6E77000989B0 /* CustomCollectionViewCell.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EC90E86228C7AE97004237E1 = {
+			isa = PBXGroup;
+			children = (
+				ECC1B32A28CA25310029386D /* ViewControlllers */,
+				EC58E04F28D0A55A000989B0 /* View */,
+				EC58E05028D0A575000989B0 /* Delegate */,
 				EC90E86D28C7AE97004237E1 /* Carapaca App rascunho */,
 				EC90E86C28C7AE97004237E1 /* Products */,
 			);
@@ -84,7 +104,6 @@
 				EC90E86E28C7AE97004237E1 /* AppDelegate.swift */,
 				EC90E87028C7AE97004237E1 /* SceneDelegate.swift */,
 				EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */,
-				ECC1B32A28CA25310029386D /* ViewControlllers */,
 				EC90E87728C7AE97004237E1 /* Assets.xcassets */,
 				EC90E87928C7AE97004237E1 /* LaunchScreen.storyboard */,
 				EC90E87C28C7AE97004237E1 /* Info.plist */,
@@ -97,10 +116,10 @@
 		ECC1B32A28CA25310029386D /* ViewControlllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC90E87228C7AE97004237E1 /* ViewController.swift */,
 				EC58E04528CF6B89000989B0 /* CVViewController.swift */,
 				EC5A262D28CA709800368730 /* ExplorarViewController.swift */,
 				EC5A262F28CA70A600368730 /* FavoritosViewController.swift */,
-				EC90E87228C7AE97004237E1 /* ViewController.swift */,
 				ECC1B32828CA25140029386D /* NovaViagemViewController.swift */,
 				EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */,
 				EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */,
@@ -185,6 +204,7 @@
 				ECC1B32928CA25140029386D /* NovaViagemViewController.swift in Sources */,
 				EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */,
 				EC90E86F28C7AE97004237E1 /* AppDelegate.swift in Sources */,
+				EC58E04E28D0A534000989B0 /* NovaViagemView.swift in Sources */,
 				EC5A263028CA70A600368730 /* FavoritosViewController.swift in Sources */,
 				EC90E87128C7AE97004237E1 /* SceneDelegate.swift in Sources */,
 				EC58E04828CF6E77000989B0 /* CustomCollectionViewCell.swift in Sources */,

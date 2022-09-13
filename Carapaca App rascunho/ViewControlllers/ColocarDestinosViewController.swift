@@ -123,7 +123,23 @@ class ColocarDestinosViewController: UIViewController {
         
         roteiroTextField.placeholder = "Escolha uma cidade ou estado"
         roteiroTextField.font = UIFont.systemFont(ofSize: 17)
-//        roteiroTextField.backgroundColor = .gray
+        roteiroTextField.backgroundColor = UIColor.white
+        roteiroTextField.borderStyle = .roundedRect
+        roteiroTextField.frame = CGRect(x: 0, y: 0, width: 343, height: 44)
+//        roteiroTextField.layer.borderColor = UIColor.gray.cgColor
+//        roteiroTextField.layer.borderWidth = 1
+//        roteiroTextField.backgroundColor = UIColor.secondarySystemBackground
+        roteiroTextField.backgroundColor = UIColor.init(red: 213.0/255.0, green: 207.0/255.0, blue: 207.0/255.0, alpha: 1)
+        let searchIcon = UIImageView.init(frame: CGRect.init(x: 10, y: 10, width: 20, height: 20))
+                searchIcon.image = UIImage.init(systemName: "magnifyingglass")
+                searchIcon.tintColor = .black
+                let leftView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
+                leftView.backgroundColor = .clear
+                leftView.addSubview(searchIcon)
+                roteiroTextField.leftView = leftView
+                roteiroTextField.leftViewMode = .always
+        
+        
         
         adicionarButton.setTitle("  Adicionar  ", for: .normal)
         adicionarButton.setTitleColor(.white, for: .normal)

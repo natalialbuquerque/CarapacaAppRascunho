@@ -14,30 +14,21 @@ class HomeView: UIView {
     let title2Label = UILabel()
     let criarRoteiroButton = UIButton(configuration: .filled())
     let meusRoteirosLabel = UILabel()
-//    var meusRoteirosCollectionView = UICollectionView()
-//    let layout = UICollectionViewFlowLayout ()
+    var meusRoteirosCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let layout = UICollectionViewFlowLayout()
     
     let bgHomeContainer = UIView()
     let title1Container = UIView()
     let title2Container = UIView()
     let criarRoteiroButtonContainer = UIView()
     let meusRoteirosContainer = UIView()
-//    let meusRoteirosCollectionViewContainer = UIView()
+    let meusRoteirosCollectionViewContainer = UIView()
     
     let stackView = UIStackView()
     
     weak var delegate: HomeViewDelegate?
     
-    //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    //        return 30
-    //    }
-    //
-    //    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier , for: indexPath) as! CustomCollectionViewCell
-    //        cell.configure(label: "Custom \(indexPath.row)")
-    //
-    //        return cell
-    //    }
+
         
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,23 +46,21 @@ class HomeView: UIView {
             // MARK: - Setup na hierarquia das subviews
             self.addSubview(bgHomeView)
             self.addSubview(stackView)
-            self.addSubview(title1Label)
-            self.addSubview(title2Label)
-    //        view.addSubview(meusRoteirosCollectionView)
             
             stackView.addArrangedSubview(bgHomeContainer)
-            stackView.addArrangedSubview(title1Container)
-            stackView.addArrangedSubview(title2Container)
             stackView.addArrangedSubview(criarRoteiroButtonContainer)
             stackView.addArrangedSubview(meusRoteirosContainer)
-    //        stackView.addArrangedSubview(meusRoteirosCollectionViewContainer)
+            stackView.addArrangedSubview(meusRoteirosCollectionViewContainer)
             
             bgHomeContainer.addSubview(bgHomeView)
             title1Container.addSubview(title1Label)
             title2Container.addSubview(title2Label)
             criarRoteiroButtonContainer.addSubview(criarRoteiroButton)
             meusRoteirosContainer.addSubview(meusRoteirosLabel)
-    //        meusRoteirosCollectionViewContainer.addSubview(meusRoteirosCollectionView)
+            meusRoteirosCollectionViewContainer.addSubview(meusRoteirosCollectionView)
+            
+            bgHomeContainer.addSubview(title1Container)
+            bgHomeContainer.addSubview(title2Container)
         }
         
         
@@ -102,35 +91,36 @@ class HomeView: UIView {
             title2Label.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 title2Label.leadingAnchor.constraint(equalTo: title2Container.leadingAnchor, constant: 16),
-                title2Label.bottomAnchor.constraint(equalTo: bgHomeView.bottomAnchor, constant: -24)
+                title2Label.bottomAnchor.constraint(equalTo: bgHomeView.bottomAnchor, constant: -18)
             ])
-            
-            
-            meusRoteirosLabel.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                meusRoteirosLabel.leadingAnchor.constraint(equalTo: title2Container.leadingAnchor, constant: 16),
-                meusRoteirosLabel.bottomAnchor.constraint(equalTo: criarRoteiroButton.bottomAnchor, constant: 50)
-            ])
-            
             
             criarRoteiroButton.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 criarRoteiroButton.centerXAnchor.constraint(equalTo: criarRoteiroButtonContainer.centerXAnchor),
-                criarRoteiroButton.centerYAnchor.constraint(equalTo: criarRoteiroButtonContainer.bottomAnchor, constant: -390),
                 criarRoteiroButton.trailingAnchor.constraint(equalTo: criarRoteiroButtonContainer.trailingAnchor, constant: -16),
+                criarRoteiroButton.leadingAnchor.constraint(equalTo: criarRoteiroButtonContainer.leadingAnchor, constant: 16),
                 criarRoteiroButton.heightAnchor.constraint(equalToConstant: 64),
                 criarRoteiroButton.topAnchor.constraint(equalTo: bgHomeView.bottomAnchor, constant: 22)
             ])
             
-    //        meusRoteirosCollectionView.translatesAutoresizingMaskIntoConstraints = false
-    //        NSLayoutConstraint.activate([
-    //            meusRoteirosCollectionView.centerYAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.centerYAnchor),
-    //            meusRoteirosCollectionView.centerXAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.centerXAnchor),
-    //            meusRoteirosCollectionView.topAnchor.constraint(equalTo: meusRoteirosLabel.bottomAnchor),
-    //            meusRoteirosCollectionViewContainer.leadingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.leadingAnchor, constant:  16),
-    //            meusRoteirosCollectionViewContainer.trailingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.trailingAnchor, constant:  -16)
-    //
-    //        ])
+            meusRoteirosLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                meusRoteirosLabel.leadingAnchor.constraint(equalTo: title2Container.leadingAnchor, constant: 16),
+                meusRoteirosLabel.topAnchor.constraint(equalTo: criarRoteiroButton.bottomAnchor, constant: 24)
+            ])
+            
+            
+            
+            
+            meusRoteirosCollectionView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                meusRoteirosCollectionView.centerYAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.centerYAnchor),
+                meusRoteirosCollectionView.centerXAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.centerXAnchor),
+                meusRoteirosCollectionView.topAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.topAnchor),
+                meusRoteirosCollectionViewContainer.leadingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.leadingAnchor, constant:  16),
+                meusRoteirosCollectionViewContainer.trailingAnchor.constraint(equalTo: meusRoteirosCollectionViewContainer.trailingAnchor, constant:  -16)
+    
+            ])
         }
         
         
@@ -167,21 +157,20 @@ class HomeView: UIView {
             stackView.distribution = .fillProportionally
             stackView.spacing = 22
             
-    //        layout.scrollDirection = .vertical
-    //        layout.minimumLineSpacing = 1
-    //        layout.minimumInteritemSpacing = 1
-    //        layout.itemSize = CGSize(width: (view.frame.size.width/2)-4,
-    //                                 height: (view.frame.size.width/2)-4)
-    //
-    //
-    //        meusRoteirosCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    ////        guard let meusRoteirosCollectionView = meusRoteirosCollectionView else {
-    ////            return
-    ////        }
-    //        meusRoteirosCollectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
-    //        meusRoteirosCollectionView.frame = view.bounds
+            layout.scrollDirection = .vertical
+            layout.minimumLineSpacing = 1
+            layout.minimumInteritemSpacing = 1
+            layout.itemSize = CGSize(width: (self.frame.size.width/2)-4,
+                                     height: (self.frame.size.width/2)-4)
+            meusRoteirosCollectionView.collectionViewLayout = layout
+    //        guard let meusRoteirosCollectionView = meusRoteirosCollectionView else {
+    //            return
+    //        }
+            meusRoteirosCollectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
+//            meusRoteirosCollectionView.frame = self.bounds
 
         }
+    
     func setupAdditionalConfiguration(){
          // MARK: - Outras configurações
         criarRoteiroButton.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)

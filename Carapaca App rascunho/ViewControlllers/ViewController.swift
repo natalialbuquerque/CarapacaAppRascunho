@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     let homeView = HomeView()
 
@@ -18,9 +18,20 @@ class ViewController: UIViewController{
         self.view = homeView
         homeView.delegate = self
 
-//        meusRoteirosCollectionView.dataSource = self
-//        meusRoteirosCollectionView.delegate = self
-    }    
+        homeView.meusRoteirosCollectionView.dataSource = self
+        homeView.meusRoteirosCollectionView.delegate = self
+    }
+    
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return 30
+        }
+    
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier , for: indexPath) as! CustomCollectionViewCell
+            cell.configure(label: "Custom \(indexPath.row)")
+    
+            return cell
+        }
 }
 
 extension ViewController: HomeViewDelegate{
@@ -28,8 +39,7 @@ extension ViewController: HomeViewDelegate{
         print("Deve aparecer a próxima página")
     }
 }
-
-// MARK: - Preview
+ //MARK: - Preview
 #if DEBUG
 import SwiftUI
 
@@ -44,3 +54,4 @@ struct ViewController_Preview: PreviewProvider {
     }
 }
 #endif
+

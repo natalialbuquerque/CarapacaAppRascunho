@@ -49,18 +49,18 @@ class CVViewController: UIViewController, UICollectionViewDataSource, UICollecti
 
 }
 
-//// MARK: - Preview
-//#if DEBUG
-//import SwiftUI
-//
-//@available(iOS 13, *)
-//struct CVViewController_Preview: PreviewProvider {
-//    static var previews: some View {
-//        // view controller using programmatic UI
-//        Group {
-//            CVViewController().showPreview().previewDevice("iPhone 13").previewInterfaceOrientation(.portrait)
-////            ViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
-//        }
-//    }
-//}
-//#endif
+// MARK: - Preview
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13, *)
+struct CVViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        // view controller using programmatic UI
+        Group {
+            CVViewController().showPreview().previewDevice("iPhone 13").previewInterfaceOrientation(.portrait)
+//            ViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
+        }
+    }
+}
+#endif
