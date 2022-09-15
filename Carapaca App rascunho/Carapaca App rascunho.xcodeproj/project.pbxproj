@@ -10,7 +10,7 @@
 		EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */; };
 		EC5A262A28CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */; };
 		EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */; };
-		EC5A262E28CA709800368730 /* ExplorarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262D28CA709800368730 /* ExplorarViewController.swift */; };
+		EC5A262E28CA709800368730 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262D28CA709800368730 /* ExploreViewController.swift */; };
 		EC5A263028CA70A600368730 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A262F28CA70A600368730 /* FavoritosViewController.swift */; };
 		EC90E86F28C7AE97004237E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E86E28C7AE97004237E1 /* AppDelegate.swift */; };
 		EC90E87128C7AE97004237E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E87028C7AE97004237E1 /* SceneDelegate.swift */; };
@@ -20,13 +20,16 @@
 		EC90E88428C7B12D004237E1 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E88228C7B12C004237E1 /* UIViewController+Preview.swift */; };
 		EC90E88528C7B12D004237E1 /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E88328C7B12D004237E1 /* UIView+Preview.swift */; };
 		ECC1B32928CA25140029386D /* NovaViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1B32828CA25140029386D /* NovaViagemViewController.swift */; };
+		FC32CDEE28D25CDC0050AF4A /* LocalizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32CDED28D25CDC0050AF4A /* LocalizacaoViewController.swift */; };
+		FC36B9A728D27C5D001EB21F /* ExplorarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36B9A628D27C5D001EB21F /* ExplorarViewController.swift */; };
+		FC3901AA28D36EB70056AE1E /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3901A928D36EB70056AE1E /* ExploreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColocarDestinosViewController.swift; sourceTree = "<group>"; };
 		EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrucaoDoRoteiroViewController.swift; sourceTree = "<group>"; };
 		EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		EC5A262D28CA709800368730 /* ExplorarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarViewController.swift; sourceTree = "<group>"; };
+		EC5A262D28CA709800368730 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		EC5A262F28CA70A600368730 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
 		EC90E86B28C7AE97004237E1 /* Carapaca App rascunho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carapaca App rascunho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC90E86E28C7AE97004237E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		EC90E88228C7B12C004237E1 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		EC90E88328C7B12D004237E1 /* UIView+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		ECC1B32828CA25140029386D /* NovaViagemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaViagemViewController.swift; sourceTree = "<group>"; };
+		FC32CDED28D25CDC0050AF4A /* LocalizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoViewController.swift; sourceTree = "<group>"; };
+		FC36B9A628D27C5D001EB21F /* ExplorarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarViewController.swift; sourceTree = "<group>"; };
+		FC3901A928D36EB70056AE1E /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 				EC90E86E28C7AE97004237E1 /* AppDelegate.swift */,
 				EC90E87028C7AE97004237E1 /* SceneDelegate.swift */,
 				EC5A262B28CA6F7D00368730 /* MainTabBarViewController.swift */,
+				FCAF344A28D1FA4D00E494F4 /* Views */,
 				ECC1B32A28CA25310029386D /* ViewControlllers */,
 				EC90E87728C7AE97004237E1 /* Assets.xcassets */,
 				EC90E87928C7AE97004237E1 /* LaunchScreen.storyboard */,
@@ -86,14 +93,24 @@
 		ECC1B32A28CA25310029386D /* ViewControlllers */ = {
 			isa = PBXGroup;
 			children = (
-				EC5A262D28CA709800368730 /* ExplorarViewController.swift */,
+				EC5A262D28CA709800368730 /* ExploreViewController.swift */,
 				EC5A262F28CA70A600368730 /* FavoritosViewController.swift */,
 				EC90E87228C7AE97004237E1 /* ViewController.swift */,
 				ECC1B32828CA25140029386D /* NovaViagemViewController.swift */,
 				EC5A262728CA594300368730 /* ColocarDestinosViewController.swift */,
 				EC5A262928CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift */,
+				FC32CDED28D25CDC0050AF4A /* LocalizacaoViewController.swift */,
+				FC36B9A628D27C5D001EB21F /* ExplorarViewController.swift */,
 			);
 			path = ViewControlllers;
+			sourceTree = "<group>";
+		};
+		FCAF344A28D1FA4D00E494F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC3901A928D36EB70056AE1E /* ExploreView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,17 +183,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3901AA28D36EB70056AE1E /* ExploreView.swift in Sources */,
 				EC90E87328C7AE97004237E1 /* ViewController.swift in Sources */,
 				EC5A262A28CA5D6600368730 /* ConstrucaoDoRoteiroViewController.swift in Sources */,
 				ECC1B32928CA25140029386D /* NovaViagemViewController.swift in Sources */,
+				FC32CDEE28D25CDC0050AF4A /* LocalizacaoViewController.swift in Sources */,
 				EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */,
 				EC90E86F28C7AE97004237E1 /* AppDelegate.swift in Sources */,
 				EC5A263028CA70A600368730 /* FavoritosViewController.swift in Sources */,
 				EC90E87128C7AE97004237E1 /* SceneDelegate.swift in Sources */,
 				EC90E88528C7B12D004237E1 /* UIView+Preview.swift in Sources */,
+				FC36B9A728D27C5D001EB21F /* ExplorarViewController.swift in Sources */,
 				EC90E88428C7B12D004237E1 /* UIViewController+Preview.swift in Sources */,
 				EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */,
-				EC5A262E28CA709800368730 /* ExplorarViewController.swift in Sources */,
+				EC5A262E28CA709800368730 /* ExploreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
