@@ -28,14 +28,42 @@ class ExploreView: UIView {
     }()
     
     let title1Label: UILabel = {
-        title1Label.textAlignment = .left
-        title1Label.text = "Explore o mundo"
-        title1Label.textColor = UIColor(red: 0.99, green: 0.99, blue: 0.99, alpha: 1.00)
-        title1Label.font = UIFont.boldSystemFont(ofSize: 28)
-    }
+        let label = UILabel()
+        label.textAlignment = .left
+        label.text = "Explore o mundo"
+        label.textColor = UIColor(red: 0.99, green: 0.99, blue: 0.99, alpha: 1.00)
+        label.font = UIFont.boldSystemFont(ofSize: 28)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
-    let title2Label = UILabel()
-    let localizacaoButton = UIButton()
+    let title2Label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.text = "Encontre os melhores lugares para você visitar!"
+        label.textColor = UIColor(red: 0.99, green: 0.99, blue: 0.99, alpha: 1.00)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    let localizacaoButton: UIButton = {
+        let button = UIButton(configuration: .filled())
+        button.setTitle("Sua Localização", for: .normal)
+        button.setTitleColor(UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.00), for: .normal)
+        button.tintColor = UIColor(red: 0.01, green: 0.23, blue: 0.17, alpha: 1.00)
+        button.layer.cornerCurve = .continuous
+        button.layer.cornerRadius = 20
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        button.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        button.titleLabel?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        button.imageView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        button.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,6 +80,9 @@ class ExploreView: UIView {
     func setupHierarchy() {
         addSubview(viewRetangularGreen)
         addSubview(viewGreen)
+        addSubview(title1Label)
+        addSubview(title2Label)
+        addSubview(localizacaoButton)
         
     }
     
@@ -69,6 +100,31 @@ class ExploreView: UIView {
             viewRetangularGreen.trailingAnchor.constraint(equalTo: trailingAnchor),
             viewRetangularGreen.bottomAnchor.constraint(equalTo: viewGreen.centerYAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            title1Label.leadingAnchor.constraint(equalTo: viewGreen.leadingAnchor, constant: 16),
+            title1Label.bottomAnchor.constraint(equalTo: viewGreen.bottomAnchor, constant: -88),
+            title1Label.topAnchor.constraint(equalTo: viewGreen.topAnchor, constant: 107),
+            title1Label.trailingAnchor.constraint(equalTo: viewGreen.trailingAnchor, constant: -103)
+            
+        ])
+        
+        NSLayoutConstraint.activate([
+            title2Label.topAnchor.constraint(equalTo: title1Label.bottomAnchor, constant: 11),
+            title2Label.leadingAnchor.constraint(equalTo: viewGreen.leadingAnchor, constant: 16),
+            title2Label.trailingAnchor.constraint(equalTo: viewGreen.trailingAnchor, constant: -16),
+            title2Label.bottomAnchor.constraint(equalTo: viewGreen.bottomAnchor, constant: -55)
+
+        ])
+        
+        NSLayoutConstraint.activate([
+            localizacaoButton.topAnchor.constraint(equalTo: title2Label.bottomAnchor, constant: 6),
+            localizacaoButton.leadingAnchor.constraint(equalTo: viewGreen.leadingAnchor, constant: 16),
+            localizacaoButton.trailingAnchor.constraint(lessThanOrEqualTo: viewGreen.trailingAnchor, constant: -16),
+            localizacaoButton.bottomAnchor.constraint(equalTo: viewGreen.bottomAnchor, constant: -16)
+        ])
+        
+        
     }
     
 }

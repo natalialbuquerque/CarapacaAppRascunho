@@ -13,7 +13,7 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         let vc1 = UINavigationController(rootViewController: ViewController())
-        let vc2 = UINavigationController(rootViewController: ExplorarViewController())
+        let vc2 = UINavigationController(rootViewController: ExploreViewController())
         let vc3 = UINavigationController(rootViewController: FavoritosViewController())
         
         vc1.tabBarItem.image = UIImage(systemName: "map")
