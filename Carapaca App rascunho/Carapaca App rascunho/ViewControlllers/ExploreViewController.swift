@@ -239,6 +239,18 @@ class ExploreViewController: UIViewController {
     }
     
     
+    func setupAdditionalConfiguration() {
+        
+
+            verMais1Button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        }
+//
+        @objc func tappedButton(sender: UIButton){
+            print("Apertou o botao")
+            delegate?.criarRoteiro()
+//
+    
+    
     
     
 //    override func loadView() {
