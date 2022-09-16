@@ -19,7 +19,6 @@ class ExplorarViewController: UIViewController {
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 20
-        //        stackView.backgroundColor = .green
         return stackView
     }()
     
@@ -29,7 +28,6 @@ class ExplorarViewController: UIViewController {
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 0
-        //        stackView.backgroundColor = .green
         return stackView
     }()
     
@@ -58,6 +56,7 @@ class ExplorarViewController: UIViewController {
         layout.itemSize = CGSize(width: 157, height: 136)
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "pessoasCell")
         collectionView.register(PessoasCollectionViewCell.self, forCellWithReuseIdentifier: PessoasCollectionViewCell.identifier)
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
@@ -96,7 +95,9 @@ class ExplorarViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 157, height: 136)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "rendaCell")
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "rendaCell")
+        collectionView.register(RendaCollectionViewCell.self, forCellWithReuseIdentifier: RendaCollectionViewCell.identifier)
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
         
     }()
@@ -129,12 +130,14 @@ class ExplorarViewController: UIViewController {
         return verMais
     }()
     
-    private let descansarCollectionView: UICollectionView = {
+    let descansarCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 157, height: 136)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "rendaCell")
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "descansarCell")
+        collectionView.register(DescansarCollectionViewCell.self, forCellWithReuseIdentifier: DescansarCollectionViewCell.identifier)
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
         
     }()
@@ -156,10 +159,7 @@ class ExplorarViewController: UIViewController {
         
         descansarCollectionView.delegate = self
         descansarCollectionView.dataSource = self
-        
-        
-        
-        // Do any additional setup after loading the view.
+
     }
     
     func setupHierarchy() {
@@ -256,26 +256,7 @@ class ExplorarViewController: UIViewController {
     
 }
 
-//extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = pessoasCollectionView.dequeueReusableCell(withReuseIdentifier: PessoasCollectionViewCell.identifier, for: indexPath) as! PessoasCollectionViewCell
-//        cell.backgroundColor = .white
-//        cell.configure(imagem: UIImage(systemName: "person.2") ?? UIImage(), lugar: "Lugar")
-//        return cell
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 4
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("Clicou em uma cell")
-//    }
-//
-//}
-//
-extension ExploreView: DelegateExplorar {
+extension ExplorarViewController: DelegateExplorar {
     
     func verMais() {
         print("Página de Ver Mais")
@@ -287,7 +268,7 @@ extension ExploreView: DelegateExplorar {
 import SwiftUI
 
 @available(iOS 13, *)
-struct ExploreViewController_Preview: PreviewProvider {
+struct ExplorarViewController_Preview: PreviewProvider {
     static var previews: some View {
         // view controller using programmatic UI
         Group {

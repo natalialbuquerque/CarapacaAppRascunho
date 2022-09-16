@@ -7,13 +7,24 @@
 
 import UIKit
 
-extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ExplorarViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = pessoasCollectionView.dequeueReusableCell(withReuseIdentifier: PessoasCollectionViewCell.identifier, for: indexPath) as! PessoasCollectionViewCell
-//        cell.backgroundColor = .white
-        cell.configure(imagem: UIImage(systemName: "person.2") ?? UIImage(), lugar: "Lugar")
-        return cell
+        if collectionView == self.pessoasCollectionView {
+            return makePessoasCell(indexPath)
+            
+        } else if  collectionView == self.rendaCollectionView {
+            return makeRendaCell(indexPath)
+            
+        } else if collectionView == self.descansarCollectionView {
+            return makeDescansarCell(indexPath)
+            
+            
+        } else{
+            return UICollectionViewCell()
+            
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -24,6 +35,30 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         print("Clicou em uma cell")
     }
     
+    fileprivate func makePessoasCell(_ indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = pessoasCollectionView.dequeueReusableCell(withReuseIdentifier: "pessoasCell", for: indexPath) as? PessoasCollectionViewCell
+        cell?.configure(imagem: UIImage(named: "Rectangle 361") ?? UIImage(), lugar: "Lugar")
+        return cell ?? UICollectionViewCell()
+        
+    }
+    
+    fileprivate func makeRendaCell(_ indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = rendaCollectionView.dequeueReusableCell(withReuseIdentifier: "rendaCell", for: indexPath) as? RendaCollectionViewCell
+        cell?.configure(imagem: UIImage(named: "Rectangle 361") ?? UIImage(), lugar: "Renda")
+        return cell ?? UICollectionViewCell()
+        
+    }
+
+    fileprivate func makeDescansarCell(_ indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = descansarCollectionView.dequeueReusableCell(withReuseIdentifier: "descansarCell", for: indexPath) as? DescansarCollectionViewCell
+        cell?.configure(imagem: UIImage(named: "Rectangle 361") ?? UIImage(), lugar: "Descansar")
+        return cell ?? UICollectionViewCell()
+
+    }
 }
+
 
 
