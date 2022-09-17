@@ -31,6 +31,7 @@
 		FC749CBE28D642810089FA54 /* ExploreLocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC749CBD28D642810089FA54 /* ExploreLocalView.swift */; };
 		FC749CC028D65D920089FA54 /* ExplorarLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC749CBF28D65D920089FA54 /* ExplorarLocalViewController.swift */; };
 		FC749CC228D667A40089FA54 /* ExploreLocalBotaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC749CC128D667A40089FA54 /* ExploreLocalBotaoView.swift */; };
+		FC749CC428D686620089FA54 /* PopUpLocalAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC749CC328D686620089FA54 /* PopUpLocalAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		FC749CBD28D642810089FA54 /* ExploreLocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLocalView.swift; sourceTree = "<group>"; };
 		FC749CBF28D65D920089FA54 /* ExplorarLocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarLocalViewController.swift; sourceTree = "<group>"; };
 		FC749CC128D667A40089FA54 /* ExploreLocalBotaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLocalBotaoView.swift; sourceTree = "<group>"; };
+		FC749CC328D686620089FA54 /* PopUpLocalAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpLocalAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				FC3901A928D36EB70056AE1E /* ExploreView.swift */,
 				FC749CBD28D642810089FA54 /* ExploreLocalView.swift */,
 				FC749CC128D667A40089FA54 /* ExploreLocalBotaoView.swift */,
+				FC749CC328D686620089FA54 /* PopUpLocalAddView.swift */,
 				FC4F447D28D3E1E6005B4E53 /* PessoasCollectionViewCell.swift */,
 				FC36C29228D49494002AD596 /* RendaCollectionViewCell.swift */,
 				FC36C29428D49596002AD596 /* DescansarCollectionViewCell.swift */,
@@ -234,6 +237,7 @@
 				FC4F447C28D3DC0A005B4E53 /* DelegateExplorar.swift in Sources */,
 				FC36B9A728D27C5D001EB21F /* ExpViewController.swift in Sources */,
 				EC90E88428C7B12D004237E1 /* UIViewController+Preview.swift in Sources */,
+				FC749CC428D686620089FA54 /* PopUpLocalAddView.swift in Sources */,
 				EC5A262828CA594300368730 /* ColocarDestinosViewController.swift in Sources */,
 				EC5A262E28CA709800368730 /* ExplorarViewController.swift in Sources */,
 				FC4F447E28D3E1E6005B4E53 /* PessoasCollectionViewCell.swift in Sources */,
