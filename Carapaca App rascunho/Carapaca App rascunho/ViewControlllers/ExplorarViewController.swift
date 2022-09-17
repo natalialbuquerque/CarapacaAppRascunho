@@ -45,7 +45,6 @@ class ExplorarViewController: UIViewController {
         verMais.setTitle("Ver Mais", for: .normal)
         verMais.setTitleColor(UIColor(red: 0.01, green: 0.23, blue: 0.17, alpha: 1.00), for: .normal)
         verMais.clipsToBounds = true
-        //        verMais.backgroundColor = .blue
         return verMais
     }()
     
@@ -56,7 +55,6 @@ class ExplorarViewController: UIViewController {
         layout.itemSize = CGSize(width: 157, height: 136)
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "pessoasCell")
         collectionView.register(PessoasCollectionViewCell.self, forCellWithReuseIdentifier: PessoasCollectionViewCell.identifier)
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
@@ -68,7 +66,6 @@ class ExplorarViewController: UIViewController {
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 0
-        //        stackView.backgroundColor = .green
         return stackView
     }()
     
@@ -86,7 +83,6 @@ class ExplorarViewController: UIViewController {
         verMais.setTitle("Ver Mais", for: .normal)
         verMais.setTitleColor(UIColor(red: 0.01, green: 0.23, blue: 0.17, alpha: 1.00), for: .normal)
         verMais.clipsToBounds = true
-        //        verMais.backgroundColor = .blue
         return verMais
     }()
     
@@ -95,7 +91,6 @@ class ExplorarViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 157, height: 136)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "rendaCell")
         collectionView.register(RendaCollectionViewCell.self, forCellWithReuseIdentifier: RendaCollectionViewCell.identifier)
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
@@ -135,14 +130,13 @@ class ExplorarViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 157, height: 136)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "descansarCell")
         collectionView.register(DescansarCollectionViewCell.self, forCellWithReuseIdentifier: DescansarCollectionViewCell.identifier)
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
         
     }()
     
-    var delegate: DelegateExplorar?
+    weak var delegate: DelegateExplorar?
     
     
     override func viewDidLoad() {
@@ -150,6 +144,7 @@ class ExplorarViewController: UIViewController {
         
         setupHierarchy()
         setupConstraints()
+        setupAdditionalConfiguration()
         
         pessoasCollectionView.delegate = self
         pessoasCollectionView.dataSource = self
@@ -195,8 +190,6 @@ class ExplorarViewController: UIViewController {
             exploreView.topAnchor.constraint(equalTo: view.topAnchor),
             exploreView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             exploreView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-            //            exploreView.bo
-            
         ])
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -245,13 +238,25 @@ class ExplorarViewController: UIViewController {
     
     func setupAdditionalConfiguration() {
         
-        verMais1Button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        verMais1Button.addTarget(self, action: #selector(tappedVerMais), for: .touchUpInside)
+        verMais2Button.addTarget(self, action: #selector(tappedVerMais), for: .touchUpInside)
+        verMais3Button.addTarget(self, action: #selector(tappedVerMais), for: .touchUpInside)
+        exploreView.localizacaoButton.addTarget(self, action: #selector(tappedLocalizacao), for: .touchUpInside)
+        
+     
     }
     
-    @objc func tappedButton(sender: UIButton) {
+    @objc func tappedVerMais(sender: UIButton) {
         print("Apertou ver mais")
         delegate?.verMais()
         
+    }
+    
+    @objc func tappedLocalizacao(sender: UIButton) {
+
+        let vc = LocalizacaoViewController()
+        vc.modalPresentationStyle = .popover
+        present(vc, animated: true)
     }
     
 }
@@ -259,7 +264,7 @@ class ExplorarViewController: UIViewController {
 extension ExplorarViewController: DelegateExplorar {
     
     func verMais() {
-        print("Página de Ver Mais")
+        //configura a segue para cada tela de Ver Mais com if else de cada botao
     }
     
 }

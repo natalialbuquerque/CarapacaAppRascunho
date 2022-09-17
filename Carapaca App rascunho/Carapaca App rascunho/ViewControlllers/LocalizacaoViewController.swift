@@ -9,19 +9,14 @@ import UIKit
 
 class LocalizacaoViewController: UIViewController {
     
+    
     let button: UIButton = {
-        let button = UIButton(configuration: .filled())
+        let button = UIButton(configuration: .plain())
         button.tintColor = UIColor(red: 0.01, green: 0.23, blue: 0.17, alpha: 1.00)
-        button.layer.cornerCurve = .continuous
-        button.layer.cornerRadius = 20
-        button.clipsToBounds = true
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
-                button.imageView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         button.setImage(UIImage(systemName: "chevron.down"), for: .normal)
         return button
     }()
-    
+
     let label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -31,19 +26,27 @@ class LocalizacaoViewController: UIViewController {
         label.numberOfLines = 0
         return label
     }()
-    
+
     let tituloStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
         stackView.alignment = .fill
         stackView.spacing = 0
-        stackView.backgroundColor = .red
+//        stackView.backgroundColor = .red
         return stackView
     }()
-    
+
     let stackView = UIStackView()
-    
+   
+
+    let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Buscar local"
+        searchBar.searchBarStyle = .minimal
+
+        return searchBar
+    }()
     
 
     override func viewDidLoad() {
@@ -54,11 +57,15 @@ class LocalizacaoViewController: UIViewController {
     }
     
     func setupHierarchy() {
-        
         view.addSubview(stackView)
+//        view.addSubview(tituloStackView)
+        view.addSubview(searchBar)
         
-        stackView.addSubview(tituloStackView)
         
+       stackView.addSubview(tituloStackView)
+        
+     
+
         tituloStackView.addArrangedSubview(button)
         tituloStackView.addArrangedSubview(label)
     }
@@ -71,18 +78,19 @@ class LocalizacaoViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+
         ])
-        
+
         tituloStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tituloStackView.topAnchor.constraint(equalTo: stackView.topAnchor),
             tituloStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             tituloStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-            tituloStackView.heightAnchor.constraint(equalToConstant: 80),
-            tituloStackView.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: -76)
+//            tituloStackView.heightAnchor.constraint(equalToConstant: 80),
+            tituloStackView.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: 76)
         ])
-        
-        
+
+
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: tituloStackView.topAnchor),
@@ -90,17 +98,30 @@ class LocalizacaoViewController: UIViewController {
             button.trailingAnchor.constraint(equalTo: tituloStackView.trailingAnchor, constant: -331),
             button.bottomAnchor.constraint(equalTo: tituloStackView.bottomAnchor)
         ])
-        
+
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: tituloStackView.topAnchor),
             label.bottomAnchor.constraint(equalTo: tituloStackView.bottomAnchor),
             label.centerXAnchor.constraint(equalTo: stackView.centerXAnchor)
         ])
+
+      
+
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            searchBar.leadingAnchor.constraint(equalTo: view
+                .leadingAnchor, constant: 16),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+
+        ])
         
-//        stackView.backgroundColor = .blue
-        
+        stackView.backgroundColor = .white
     }
+    
+    
+    
 }
 
 // MARK: - Preview

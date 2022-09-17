@@ -9,4 +9,6 @@ import Foundation
 
 protocol DelegateExplorar: AnyObject{
     func verMais()
+    
 }
+
