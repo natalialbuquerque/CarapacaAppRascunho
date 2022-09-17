@@ -28,6 +28,9 @@
 		FC3901AA28D36EB70056AE1E /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3901A928D36EB70056AE1E /* ExploreView.swift */; };
 		FC4F447C28D3DC0A005B4E53 /* DelegateExplorar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F447B28D3DC0A005B4E53 /* DelegateExplorar.swift */; };
 		FC4F447E28D3E1E6005B4E53 /* PessoasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F447D28D3E1E6005B4E53 /* PessoasCollectionViewCell.swift */; };
+		FC749CBE28D642810089FA54 /* ExploreLocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC749CBD28D642810089FA54 /* ExploreLocalView.swift */; };
+		FC749CC028D65D920089FA54 /* ExplorarLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC749CBF28D65D920089FA54 /* ExplorarLocalViewController.swift */; };
+		FC749CC228D667A40089FA54 /* ExploreLocalBotaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC749CC128D667A40089FA54 /* ExploreLocalBotaoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		FC3901A928D36EB70056AE1E /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		FC4F447B28D3DC0A005B4E53 /* DelegateExplorar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateExplorar.swift; sourceTree = "<group>"; };
 		FC4F447D28D3E1E6005B4E53 /* PessoasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PessoasCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC749CBD28D642810089FA54 /* ExploreLocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLocalView.swift; sourceTree = "<group>"; };
+		FC749CBF28D65D920089FA54 /* ExplorarLocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorarLocalViewController.swift; sourceTree = "<group>"; };
+		FC749CC128D667A40089FA54 /* ExploreLocalBotaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLocalBotaoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 			children = (
 				EC5A262D28CA709800368730 /* ExplorarViewController.swift */,
 				FC36C28E28D490EC002AD596 /* ExplorarCollectionView.swift */,
+				FC749CBF28D65D920089FA54 /* ExplorarLocalViewController.swift */,
 				FC32CDED28D25CDC0050AF4A /* LocalizacaoViewController.swift */,
 				EC5A262F28CA70A600368730 /* FavoritosViewController.swift */,
 				EC90E87228C7AE97004237E1 /* ViewController.swift */,
@@ -129,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				FC3901A928D36EB70056AE1E /* ExploreView.swift */,
+				FC749CBD28D642810089FA54 /* ExploreLocalView.swift */,
+				FC749CC128D667A40089FA54 /* ExploreLocalBotaoView.swift */,
 				FC4F447D28D3E1E6005B4E53 /* PessoasCollectionViewCell.swift */,
 				FC36C29228D49494002AD596 /* RendaCollectionViewCell.swift */,
 				FC36C29428D49596002AD596 /* DescansarCollectionViewCell.swift */,
@@ -216,9 +225,12 @@
 				EC5A262C28CA6F7D00368730 /* MainTabBarViewController.swift in Sources */,
 				FC36C29328D49494002AD596 /* RendaCollectionViewCell.swift in Sources */,
 				EC90E86F28C7AE97004237E1 /* AppDelegate.swift in Sources */,
+				FC749CBE28D642810089FA54 /* ExploreLocalView.swift in Sources */,
 				EC5A263028CA70A600368730 /* FavoritosViewController.swift in Sources */,
+				FC749CC228D667A40089FA54 /* ExploreLocalBotaoView.swift in Sources */,
 				EC90E87128C7AE97004237E1 /* SceneDelegate.swift in Sources */,
 				EC90E88528C7B12D004237E1 /* UIView+Preview.swift in Sources */,
+				FC749CC028D65D920089FA54 /* ExplorarLocalViewController.swift in Sources */,
 				FC4F447C28D3DC0A005B4E53 /* DelegateExplorar.swift in Sources */,
 				FC36B9A728D27C5D001EB21F /* ExpViewController.swift in Sources */,
 				EC90E88428C7B12D004237E1 /* UIViewController+Preview.swift in Sources */,

@@ -1,17 +1,18 @@
 //
-//  ExplorarViewController.swift
+//  ExplorarLocalViewController.swift
 //  Carapaca App rascunho
 //
-//  Created by Natália Pessoa de Azevedo Albuquerque on 08/09/22.
+//  Created by mcor on 17/09/22.
 //
 
 import UIKit
 
-class ExplorarViewController: UIViewController {
+class ExplorarLocalViewController: UIViewController {
     
-    let exploreView = ExploreView()
+    let exploreLocalView = ExploreLocalView()
     let scrollView =  UIScrollView()
     let contentView = UIView()
+    let exploreLocalBotaoView = ExploreLocalBotaoView()
     
     let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -103,7 +104,6 @@ class ExplorarViewController: UIViewController {
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 0
-        //        stackView.backgroundColor = .green
         return stackView
     }()
     
@@ -121,7 +121,6 @@ class ExplorarViewController: UIViewController {
         verMais.setTitle("Ver Mais", for: .normal)
         verMais.setTitleColor(UIColor(red: 0.01, green: 0.23, blue: 0.17, alpha: 1.00), for: .normal)
         verMais.clipsToBounds = true
-        //        verMais.backgroundColor = .blue
         return verMais
     }()
     
@@ -136,12 +135,16 @@ class ExplorarViewController: UIViewController {
         
     }()
     
+   
     weak var delegate: DelegateExplorar?
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.navigationItem.title = "Nome do Roteiro"
+//        navigationController?.title = "Nome do Roteiro"
+//        navigationItem.backBarButtonItem?.image = .checkmark
+//        navigationItem.title = "Nome do Roteiro"
         
         setupHierarchy()
         setupConstraints()
@@ -156,11 +159,14 @@ class ExplorarViewController: UIViewController {
         descansarCollectionView.delegate = self
         descansarCollectionView.dataSource = self
 
+        
     }
     
     func setupHierarchy() {
-        view.addSubview(exploreView)
+        
+        view.addSubview(exploreLocalView)
         view.addSubview(scrollView)
+        view.addSubview(exploreLocalBotaoView)
         
         scrollView.addSubview(contentView)
         
@@ -186,16 +192,25 @@ class ExplorarViewController: UIViewController {
     }
     
     func setupConstraints() {
-        exploreView.translatesAutoresizingMaskIntoConstraints = false
+        
+        exploreLocalView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            exploreView.topAnchor.constraint(equalTo: view.topAnchor),
-            exploreView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            exploreView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            exploreLocalView.topAnchor.constraint(equalTo: view.topAnchor),
+            exploreLocalView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            exploreLocalView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        exploreLocalBotaoView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            exploreLocalBotaoView.heightAnchor.constraint(equalToConstant: 95),
+            exploreLocalBotaoView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            exploreLocalBotaoView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            exploreLocalBotaoView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: exploreView.bottomAnchor),
+            scrollView.topAnchor.constraint(equalTo: exploreLocalView.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
@@ -233,16 +248,16 @@ class ExplorarViewController: UIViewController {
             descansarCollectionView.heightAnchor.constraint(equalToConstant: 136)
         ])
         
+        
         view.backgroundColor = .white
     }
-    
     
     func setupAdditionalConfiguration() {
         
         verMais1Button.addTarget(self, action: #selector(tappedVerMais), for: .touchUpInside)
         verMais2Button.addTarget(self, action: #selector(tappedVerMais), for: .touchUpInside)
         verMais3Button.addTarget(self, action: #selector(tappedVerMais), for: .touchUpInside)
-        exploreView.localizacaoButton.addTarget(self, action: #selector(tappedLocalizacao), for: .touchUpInside)
+        exploreLocalBotaoView.concluirButton.addTarget(self, action: #selector(tappedConcluir), for: .touchUpInside)
         
      
     }
@@ -253,32 +268,78 @@ class ExplorarViewController: UIViewController {
         
     }
     
-    @objc func tappedLocalizacao(sender: UIButton) {
-
-        let vc = LocalizacaoViewController()
-        vc.modalPresentationStyle = .popover
-        present(vc, animated: true)
+    @objc func tappedConcluir(sender: UIButton) {
+        print("Concluiu")
     }
     
+   
 }
 
-extension ExplorarViewController: DelegateExplorar {
+extension ExplorarLocalViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func verMais() {
-        //configura a segue para cada tela de Ver Mais com if else de cada botao
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.pessoasCollectionView {
+            return makePessoasCell(indexPath)
+            
+        } else if  collectionView == self.rendaCollectionView {
+            return makeRendaCell(indexPath)
+            
+        } else if collectionView == self.descansarCollectionView {
+            return makeDescansarCell(indexPath)
+            
+            
+        } else{
+            return UICollectionViewCell()
+            
+        }
+        
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Clicou em uma cell")
+    }
+    
+    fileprivate func makePessoasCell(_ indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = pessoasCollectionView.dequeueReusableCell(withReuseIdentifier: "pessoasCell", for: indexPath) as? PessoasCollectionViewCell
+        cell?.configure(imagem: UIImage(named: "Rectangle 361") ?? UIImage(), lugar: "Lugar")
+        return cell ?? UICollectionViewCell()
+        
+    }
+    
+    fileprivate func makeRendaCell(_ indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = rendaCollectionView.dequeueReusableCell(withReuseIdentifier: "rendaCell", for: indexPath) as? RendaCollectionViewCell
+        cell?.configure(imagem: UIImage(named: "Rectangle 361") ?? UIImage(), lugar: "Renda")
+        return cell ?? UICollectionViewCell()
+        
+    }
+
+    fileprivate func makeDescansarCell(_ indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = descansarCollectionView.dequeueReusableCell(withReuseIdentifier: "descansarCell", for: indexPath) as? DescansarCollectionViewCell
+        cell?.configure(imagem: UIImage(named: "Rectangle 361") ?? UIImage(), lugar: "Descansar")
+        return cell ?? UICollectionViewCell()
+
+    }
 }
+
+
+
 // MARK: - Preview
 #if DEBUG
 import SwiftUI
 
 @available(iOS 13, *)
-struct ExplorarViewController_Preview: PreviewProvider {
+struct ExplorarLocalViewController_Preview: PreviewProvider {
     static var previews: some View {
         // view controller using programmatic UI
         Group {
-            ExplorarViewController().showPreview().previewDevice("iPhone SE (3rd generation)")
+            ExplorarLocalViewController().showPreview().previewDevice("iPhone SE (3rd generation)")
             //            ViewController().showPreview().previewDevice("iPhone SE (3rd generation)").previewInterfaceOrientation(.landscapeLeft)
         }
     }
